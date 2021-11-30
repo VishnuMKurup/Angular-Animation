@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <p class="navbar-brand">Angular Animations</p>
+</nav>
+<div class="container top">
+  <button (click)="toggle()" class="mt-100">Toggle Open/Close</button>
+  <div [@openClose]="isOpen ? 'closed' : 'open'" class="open-close-container">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+  </div>
+  <div class="top">
+    <h3>Click the button to change its color!</h3>
+    <button (click)="toggleIsCorrect()" [@toggleClick]="isGreen">Toggle Me!</button>
+  </div>
+</div>
